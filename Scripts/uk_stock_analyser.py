@@ -6,7 +6,20 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import ta
 import warnings
+import logging
+import os
 warnings.filterwarnings('ignore')
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('C:/Users/sheri/Downloads/final project/Causal_Inference/log/uk_stock_analysis.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 # Set plotting style
 plt.style.use('seaborn-v0_8')
@@ -23,11 +36,11 @@ class UKStockAnalyzer:
         Initialize the analyzer with stock tickers and date range
 
         Parameters:
-        -----------
+        ----
         tickers : list, optional
-            List of UK stock tickers (with .L suffix)
+        List of UK stock tickers (with .L suffix)
         start_date : str
-            Start date for data collection
+        Start date for data collection
         """
         self.tickers = tickers or ['HSBA.L', 'BP.L', 'AZN.L', 'GSK.L', 'VOD.L']
         self.start_date = start_date
@@ -36,15 +49,22 @@ class UKStockAnalyzer:
         self.macro_df = None
         self.final_df = None
 
+        # Create plots directory
+        self.plots_dir = 'C:/Users/sheri/Downloads/final project/Causal_Inference/output'
+        if not os.path.exists(self.plots_dir):
+            os.makedirs(self.plots_dir)
+            logger.info(f"Created plots directory: {self.plots_dir}")
+
     def fetch_stock_data(self):
         """
         Download and process stock price data for all tickers
 
         Returns:
-        --------
+        ----
         pd.DataFrame: Processed stock data with consistent format
         """
         print(f"Fetching stock data for {len(self.tickers)} tickers...")
+        logger.info(f"Starting stock data fetch for {len(self.tickers)} tickers: {self.tickers}")
 
         try:
             # Download all data efficiently
@@ -63,18 +83,21 @@ class UKStockAnalyzer:
                 try:
                     ticker_df = data[ticker].copy()
                     # Remove NaN rows
-                    ticker_df = ticker_df.dropna()  
+                    ticker_df = ticker_df.dropna()
 
                     if not ticker_df.empty:
                         ticker_df['Date'] = ticker_df.index
                         ticker_df['Ticker'] = ticker
                         stock_dfs.append(ticker_df.reset_index(drop=True))
                         print(f"Successfully processed {ticker}: {len(ticker_df)} records")
+                        logger.info(f"Successfully processed {ticker}: {len(ticker_df)} records")
                     else:
                         print(f" No data available for {ticker}")
+                        logger.warning(f"No data available for {ticker}")
 
                 except KeyError:
                     print(f" Data not found for: {ticker}")
+                    logger.error(f"Data not found for: {ticker}")
                     continue
 
             if stock_dfs:
@@ -84,12 +107,14 @@ class UKStockAnalyzer:
                 print(f"- Total records: {len(self.stock_df):,}")
                 print(f"- Date range: {self.stock_df['Date'].min()} to {self.stock_df['Date'].max()}")
                 print(f"- Tickers: {', '.join(self.stock_df['Ticker'].unique())}")
+                logger.info(f"Stock data fetch completed - Total records: {len(self.stock_df):,}, Date range: {self.stock_df['Date'].min()} to {self.stock_df['Date'].max()}")
                 return self.stock_df
             else:
                 raise ValueError("No stock data could be retrieved")
 
         except Exception as e:
             print(f"Error fetching stock data: {e}")
+            logger.error(f"Error fetching stock data: {e}")
             raise
 
     def fetch_macroeconomic_data(self):
@@ -97,13 +122,15 @@ class UKStockAnalyzer:
         Collect and process all macroeconomic indicators
 
         Returns:
-        --------
+        ----
         pd.DataFrame: Combined macroeconomic dataset
         """
         print("\nFetching macroeconomic data...")
+        logger.info("Starting macroeconomic data fetch")
 
         # 1. GBP/USD Exchange Rate
         print("- Downloading GBP/USD exchange rate...")
+        logger.info("Downloading GBP/USD exchange rate")
         try:
             fx_data = yf.download("GBPUSD=X",
                                 start="2015-01-01",
@@ -118,15 +145,18 @@ class UKStockAnalyzer:
             fx_data.reset_index(inplace=True)
             fx_data['Date'] = pd.to_datetime(fx_data['Date'])
             print(f"  FX data: {len(fx_data)} records")
+            logger.info(f"FX data downloaded: {len(fx_data)} records")
         except Exception as e:
             print(f"  Error fetching FX data: {e}")
+            logger.error(f"Error fetching FX data: {e}")
             fx_data = pd.DataFrame(columns=['Date', 'GBP/USD'])
 
 
         # 2. Consumer Price Index (CPI/Inflation)
         print("- Processing CPI data...")
+        logger.info("Processing CPI data")
         try:
-            cpi_raw = pd.read_csv('cpih01-time-series-v57.csv')
+            cpi_raw = pd.read_csv('C:/Users/sheri/Downloads/final project/Causal_Inference/Datasets/cpih01-time-series-v57.csv')
             # Convert 'Time' to datetime (monthly frequency)
             cpi_raw['Date'] = pd.to_datetime(cpi_raw['Time'], format='%b-%y', errors='coerce')
 
@@ -142,15 +172,18 @@ class UKStockAnalyzer:
             cpi_daily = cpi_main.set_index('Date').resample('D').ffill().reset_index()
 
             print(f"CPI data: {len(cpi_daily)} records")
+            logger.info(f"CPI data processed: {len(cpi_daily)} records")
         except Exception as e:
             print(f"Error processing CPI data: {e}")
+            logger.error(f"Error processing CPI data: {e}")
             cpi_daily = pd.DataFrame(columns=['Date', 'CPI'])
 
         # 3. Bank of England Base Rate
         print("- Processing Bank Rate data...")
+        logger.info("Processing Bank Rate data")
         try:
 
-            rate_df = pd.read_csv('/content/Bank_Rate_history_and_data_ Bank_of_England_Database.csv')
+            rate_df = pd.read_csv('C:/Users/sheri/Downloads/final project/Causal_Inference/Datasets/Bank_Rate_history_and_data_ Bank_of_England_Database.csv')
             # Rename columns
             rate_df.columns = ['Date Changed', 'Rate']
             rate_df['Date'] = pd.to_datetime(rate_df['Date Changed'], errors='coerce')
@@ -160,16 +193,19 @@ class UKStockAnalyzer:
             # Convert to daily and fill missing values
             rate_daily = rate_df.set_index('Date').resample('D').ffill().reset_index()
 
-            print(f"  ✓ Bank Rate data: {len(rate_daily)} records")
+            print(f"  Bank Rate data: {len(rate_daily)} records")
+            logger.info(f"Bank Rate data processed: {len(rate_daily)} records")
         except Exception as e:
-            print(f"  ✗ Error processing Bank Rate data: {e}")
+            print(f"  Error processing Bank Rate data: {e}")
+            logger.error(f"Error processing Bank Rate data: {e}")
             rate_daily = pd.DataFrame(columns=['Date', 'Rate'])
 
         # 4. Unemployment Rate
         print("- Processing Unemployment data...")
+        logger.info("Processing Unemployment data")
         try:
 
-            df = pd.read_csv("/content/Unemployment_series-180525.csv", skiprows=8)
+            df = pd.read_csv("C:/Users/sheri/Downloads/final project/Causal_Inference/Datasets/Unemployment_series-180525.csv", skiprows=8)
             df.columns = ["Date", "UnemploymentRate"]
 
             # Keep only monthly data (rows where the date contains a month abbreviation, e.g., 'FEB')
@@ -186,8 +222,10 @@ class UKStockAnalyzer:
             unemployment_daily.sort_values('Date', inplace=True)
 
             print(f" Unemployment data: {len(unemployment_daily)} records")
+            logger.info(f"Unemployment data processed: {len(unemployment_daily)} records")
         except Exception as e:
             print(f" Error processing Unemployment data: {e}")
+            logger.error(f"Error processing Unemployment data: {e}")
             unemployment_daily = pd.DataFrame(columns=['Date', 'UnemploymentRate'])
 
         # Combine all macro data
@@ -223,12 +261,13 @@ class UKStockAnalyzer:
 
         # Merge FX
         self.macro_df = pd.merge_asof( self.macro_df.sort_values('Date'), fx_data.sort_values('Date'))
-        
+
         if self.macro_df is not None:
             print(f"\nMacroeconomic data summary:")
             print(f"- Total records: {len(self.macro_df):,}")
             print(f"- Date range: {self.macro_df['Date'].min()} to {self.macro_df['Date'].max()}")
             print(f"- Variables: {', '.join([col for col in self.macro_df.columns if col != 'Date'])}")
+            logger.info(f"Macroeconomic data merge completed - Total records: {len(self.macro_df):,}")
 
         return self.macro_df
 
@@ -237,10 +276,11 @@ class UKStockAnalyzer:
         Merge stock data with macroeconomic indicators using time-series joins
 
         Returns:
-        --------
-        pd.DataFrame: Combined dataset 
+        ----
+        pd.DataFrame: Combined dataset
         """
         print("\nMerging datasets...")
+        logger.info("Starting dataset merge")
 
         if self.stock_df is None or self.macro_df is None:
             raise ValueError("Stock and macro data must be fetched first")
@@ -251,12 +291,13 @@ class UKStockAnalyzer:
 
         self.stock_df = self.stock_df.sort_values('Date')
         self.macro_df = self.macro_df.sort_values('Date')
-        
+
         self.final_df = pd.merge_asof(self.stock_df,self.macro_df, on='Date')
 
 
         print(f" Merged dataset: {len(self.final_df):,} records")
         print(f" Features: {len(self.final_df.columns)} columns")
+        logger.info(f"Dataset merge completed - {len(self.final_df):,} records with {len(self.final_df.columns)} features")
 
         return self.final_df
 
@@ -265,10 +306,11 @@ class UKStockAnalyzer:
         Calculate technical indicators for each stock
 
         Returns:
-        --------
+        ----
         pd.DataFrame: Dataset with technical indicators
         """
         print("\nCalculating technical indicators...")
+        logger.info("Starting technical indicators calculation")
 
         if self.final_df is None:
             raise ValueError("Data must be merged first")
@@ -276,9 +318,9 @@ class UKStockAnalyzer:
         def apply_technical_analysis(group):
             """Apply technical indicators to a stock group"""
             group = group.copy().sort_values('Date')
-            
+
             # Minimum data points for reliable indicators
-            if len(group) < 50:  
+            if len(group) < 50:
                 return group
 
             try:
@@ -288,7 +330,7 @@ class UKStockAnalyzer:
                 low = group['Low']
                 volume = group['Volume']
 
-                # MOMENTUM INDICATORS 
+                # MOMENTUM INDICATORS
                 # RSI (Relative Strength Index)
                 group['RSI_14'] = ta.momentum.RSIIndicator(close=close, window=14).rsi()
 
@@ -327,7 +369,7 @@ class UKStockAnalyzer:
                 # Average True Range (Volatility)
                 group['ATR_14'] = ta.volatility.AverageTrueRange(high=high, low=low, close=close, window=14).average_true_range()
 
-                # VOLUME INDICATORS 
+                # VOLUME INDICATORS
                 # Volume Moving Average
                 group['Volume_SMA_20'] = ta.trend.SMAIndicator(close=volume, window=20).sma_indicator()
                 group['Volume_Ratio'] = volume / group['Volume_SMA_20']
@@ -365,10 +407,12 @@ class UKStockAnalyzer:
 
             except Exception as e:
                 print(f"Error calculating indicators for group: {e}")
+                logger.error(f"Error calculating indicators for group: {e}")
                 return group
 
         # Apply technical analysis to each stock
         print("- Computing indicators by ticker...")
+        logger.info("Computing technical indicators by ticker")
         self.final_df = self.final_df.groupby('Ticker').apply(apply_technical_analysis).reset_index(drop=True)
 
         # Remove rows with insufficient data
@@ -380,6 +424,7 @@ class UKStockAnalyzer:
         print(f" Removed {initial_rows - final_rows:,} rows with insufficient data")
         print(f" Final dataset: {final_rows:,} records with {len(self.final_df.columns)} features")
         print(f" Final dataset: features: {self.final_df.columns}")
+        logger.info(f"Technical indicators calculation completed - Final dataset: {final_rows:,} records with {len(self.final_df.columns)} features")
 
         return self.final_df
 
@@ -390,6 +435,7 @@ class UKStockAnalyzer:
         Add lag features for causal analysis with proper data preservation
         """
         print("Adding lag features for causal analysis...")
+        logger.info("Starting lag features calculation")
 
         if self.final_df is None:
             raise ValueError("Technical indicators must be calculated first")
@@ -428,10 +474,12 @@ class UKStockAnalyzer:
 
             except Exception as e:
                 print(f"Error adding lags: {e}")
+                logger.error(f"Error adding lags: {e}")
                 return group
 
         # Apply lag features
         print("- Computing lag features by ticker...")
+        logger.info("Computing lag features by ticker")
         self.final_df = self.final_df.groupby('Ticker').apply(apply_lags).reset_index(drop=True)
 
         # Conservative data cleaning
@@ -446,6 +494,7 @@ class UKStockAnalyzer:
             print(f" Lag features added")
             print(f" Removed {before - after:,} rows with insufficient lag data")
             print(f" Final dataset: {after:,} records with {len(self.final_df.columns)} features")
+            logger.info(f"Lag features calculation completed - Final dataset: {after:,} records with {len(self.final_df.columns)} features")
 
         return self.final_df
 
@@ -454,6 +503,7 @@ class UKStockAnalyzer:
         Generate complete visualizations and analysis
         """
         print("\nGenerating complete analysis...")
+        logger.info("Starting complete analysis generation")
 
         if self.final_df is None:
             raise ValueError("Technical indicators must be calculated first")
@@ -479,9 +529,12 @@ class UKStockAnalyzer:
         # 6. Feature Importance Analysis
         self._analyze_feature_importance()
 
+        logger.info("Complete analysis generation finished")
+
     def _plot_stock_prices(self):
         """Plot individual stock price trends"""
         print("- Creating stock price visualizations...")
+        logger.info("Creating stock price visualizations")
 
         fig, axes = plt.subplots(2, 3, figsize=(18, 12))
         axes = axes.flatten()
@@ -516,11 +569,18 @@ class UKStockAnalyzer:
         plt.tight_layout()
         plt.suptitle('UK Stock Price Trends (FTSE 100 Sample)',
                     fontsize=16, fontweight='bold', y=1.02)
-        plt.show()
+
+        # Save plot
+        plot_path = os.path.join(self.plots_dir, 'stock_price_trends.png')
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Stock price trends plot saved to {plot_path}")
+
+        #plt.show()
 
     def _plot_macro_indicators(self):
         """Plot macroeconomic indicators"""
         print("- Creating macroeconomic visualizations...")
+        logger.info("Creating macroeconomic visualizations")
 
         # Get unique dates and macro data
         macro_subset = self.final_df[['Date', 'GBP/USD', 'CPI', 'Rate', 'UnemploymentRate']].drop_duplicates('Date').sort_values('Date')
@@ -558,11 +618,18 @@ class UKStockAnalyzer:
         plt.tight_layout()
         plt.suptitle('UK Macroeconomic Indicators',
                     fontsize=16, fontweight='bold', y=1.02)
-        plt.show()
+
+        # Save plot
+        plot_path = os.path.join(self.plots_dir, 'macroeconomic_indicators.png')
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Macroeconomic indicators plot saved to {plot_path}")
+
+        #plt.show()
 
     def _plot_technical_indicators(self):
         """Plot technical indicators for sample stock"""
         print("- Creating technical indicator visualizations...")
+        logger.info("Creating technical indicator visualizations")
 
         # Use first ticker as example
         sample_ticker = self.final_df['Ticker'].unique()[0]
@@ -607,11 +674,18 @@ class UKStockAnalyzer:
         axes[2].grid(True, alpha=0.3)
 
         plt.tight_layout()
-        plt.show()
+
+        # Save plot
+        plot_path = os.path.join(self.plots_dir, f'technical_indicators_{sample_ticker}.png')
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Technical indicators plot saved to {plot_path}")
+
+        #plt.show()
 
     def _plot_correlation_analysis(self):
         """Create complete correlation analysis"""
         print("- Creating correlation analysis...")
+        logger.info("Creating correlation analysis")
 
         # Select key features for correlation
         correlation_features = [
@@ -641,11 +715,18 @@ class UKStockAnalyzer:
         plt.title('Feature Correlation Matrix\n(Identifying Key Relationships)',
                  fontsize=16, fontweight='bold', pad=20)
         plt.tight_layout()
+
+        # Save plot
+        plot_path = os.path.join(self.plots_dir, 'correlation_matrix.png')
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Correlation matrix plot saved to {plot_path}")
+
         plt.show()
 
     def _plot_target_analysis(self):
         """Analyze target variable distributions"""
         print("- Creating target analysis...")
+        logger.info("Creating target analysis")
 
         fig, axes = plt.subplots(2, 2, figsize=(16, 10))
 
@@ -680,11 +761,18 @@ class UKStockAnalyzer:
         axes[1,1].tick_params(axis='x', rotation=45)
 
         plt.tight_layout()
-        plt.show()
+
+        # Save plot
+        plot_path = os.path.join(self.plots_dir, 'target_analysis.png')
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Target analysis plot saved to {plot_path}")
+
+        #plt.show()
 
     def _analyze_feature_importance(self):
         """Analyze which features are most predictive"""
         print("- Analyzing feature importance...")
+        logger.info("Analyzing feature importance")
 
         # Calculate correlation with target variable
         numeric_cols = self.final_df.select_dtypes(include=[np.number]).columns
@@ -718,21 +806,31 @@ class UKStockAnalyzer:
                     f'{width:.3f}', ha='left', va='center', fontsize=10)
 
         plt.tight_layout()
-        plt.show()
+
+        # Save plot
+        plot_path = os.path.join(self.plots_dir, 'feature_importance.png')
+        plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Feature importance plot saved to {plot_path}")
+
+        #plt.show()
 
         # Print top insights
         print("\nKey Insights - Top Predictive Features:")
+        logger.info("Top Predictive Features:")
         for i, (feature, importance) in enumerate(top_features[:10], 1):
             print(f"{i:2d}. {feature:<20} | Correlation: {importance:.4f}")
+            logger.info(f"{i:2d}. {feature:<20} | Correlation: {importance:.4f}")
 
     def generate_summary_report(self):
         """Generate complete summary report"""
         print("\n" + "="*80)
         print("UK STOCK MARKET ANALYSIS - SUMMARY REPORT")
         print("="*80)
+        logger.info("Generating summary report")
 
         if self.final_df is None:
             print("Error: Analysis not completed. Run the full pipeline first.")
+            logger.error("Analysis not completed - final_df is None")
             return
 
         # Dataset Summary
@@ -742,6 +840,8 @@ class UKStockAnalyzer:
         print(f"   • Date Range: {self.final_df['Date'].min().strftime('%Y-%m-%d')} to {self.final_df['Date'].max().strftime('%Y-%m-%d')}")
         print(f"   • Total Features: {len(self.final_df.columns)}")
 
+        logger.info(f"Dataset Summary - Records: {len(self.final_df):,}, Stocks: {self.final_df['Ticker'].nunique()}, Features: {len(self.final_df.columns)}")
+
         # Market Performance
         print(f"\n MARKET PERFORMANCE:")
         avg_returns = self.final_df.groupby('Ticker')['Daily_Return'].mean()
@@ -749,6 +849,7 @@ class UKStockAnalyzer:
 
         for ticker in avg_returns.index:
             print(f"   • {ticker:<8} | Avg Daily Return: {avg_returns[ticker]:.4f} | Volatility: {volatilities[ticker]:.4f}")
+            logger.info(f"Market Performance - {ticker}: Avg Return {avg_returns[ticker]:.4f}, Volatility {volatilities[ticker]:.4f}")
 
         # Direction Prediction Accuracy
         direction_accuracy = self.final_df['Target_Direction'].value_counts(normalize=True)
@@ -756,29 +857,36 @@ class UKStockAnalyzer:
         print(f"   • Up Days: {direction_accuracy.get(1, 0):.1%}")
         print(f"   • Down Days: {direction_accuracy.get(0, 0):.1%}")
 
+        logger.info(f"Market Direction - Up Days: {direction_accuracy.get(1, 0):.1%}, Down Days: {direction_accuracy.get(0, 0):.1%}")
+
         # Macro Environment Summary
         print(f"\n MACROECONOMIC ENVIRONMENT:")
         if 'GBP/USD' in self.final_df.columns:
             gbp_avg = self.final_df['GBP/USD'].mean()
             gbp_std = self.final_df['GBP/USD'].std()
             print(f"   • GBP/USD Average: {gbp_avg:.4f} (±{gbp_std:.4f})")
+            logger.info(f"GBP/USD Average: {gbp_avg:.4f} (±{gbp_std:.4f})")
 
         if 'Rate' in self.final_df.columns:
             rate_avg = self.final_df['Rate'].mean()
             print(f"   • Average BoE Rate: {rate_avg:.2f}%")
+            logger.info(f"Average BoE Rate: {rate_avg:.2f}%")
 
         if 'UnemploymentRate' in self.final_df.columns:
             unemp_avg = self.final_df['UnemploymentRate'].mean()
             print(f"   • Average Unemployment: {unemp_avg:.2f}%")
+            logger.info(f"Average Unemployment: {unemp_avg:.2f}%")
 
         print("\n" + "="*80)
+        logger.info("Summary report generation completed")
 
 def main():
     """
     Main execution function for analysis pipeline
     """
-    print("🇬🇧 UK Stock Market Analysis: Identifying True Drivers of Price Movements")
+    print("UK Stock Market Analysis: Identifying True Drivers of Price Movements")
     print("="*80)
+    logger.info("Starting UK Stock Market Analysis")
 
     try:
         # Initialize analyzer
@@ -786,9 +894,11 @@ def main():
             tickers=['HSBA.L', 'BP.L', 'AZN.L', 'GSK.L', 'VOD.L'],
             start_date="2020-01-01"
         )
+        logger.info("Analyzer initialized")
 
         # Execute complete analysis pipeline
         print("\n EXECUTING ANALYSIS PIPELINE...")
+        logger.info("Starting analysis pipeline")
 
         # Step 1: Fetch stock data
         stock_data = analyzer.fetch_stock_data()
@@ -813,10 +923,15 @@ def main():
         analyzer.generate_summary_report()
 
         print("\n ANALYSIS COMPLETED SUCCESSFULLY!")
+        logger.info("Analysis completed successfully")
 
         return analyzer
 
     except Exception as e:
         print(f"\n ERROR: {e}")
+        logger.error(f"Analysis failed: {e}")
         print("Please ensure you have the required data files or adjust the data sources.")
         return None
+
+if __name__ == "__main__":
+    main()
