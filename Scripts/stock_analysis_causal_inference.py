@@ -17,9 +17,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 
 # Import the uploaded modules
-from uk_stock_analyser import UKStockAnalyzer
-from advanced_analytics import AdvancedAnalytics
-from causal_inference_analysis import CausalInferenceAnalyzer
+from uk_stock_analyser_1 import UKStockAnalyzer
+from advanced_analytics_1 import AdvancedAnalytics
+from causal_inference_analysis_2 import CausalInferenceAnalyzer
 
 
 def main():
@@ -63,7 +63,9 @@ def main():
 
         print("\n ANALYSIS COMPLETED SUCCESSFULLY!")
         
-        if analyzer and analyzer.final_df is not None:
+        #if analyzer or analyzer.final_df is  None:
+        #    print("Error: Analyzer or final_df is None")
+        #    return None
         print("\n RUNNING ADVANCED ANALYTICS...")
 
         # Apply advanced analytics
@@ -83,7 +85,7 @@ def main():
         print(analyzer.final_df[available_cols].tail(10).to_string(index=False))
         
         # Initialize causal_inf
-        causal_inf = CausalInferenceAnalyzer(analyzer.final_df, target= 'Target_Direction')
+        causal_inf = CausalInferenceAnalyzer(analyzer.final_df, target_variable = 'Target_Direction')
 
         # Step 1: Granger Causality Analysis
         granger_results = causal_inf.granger_causality_analysis(max_lag=10)
@@ -92,13 +94,16 @@ def main():
         causal_graph = causal_inf.build_causal_graph()
 
         # Step 3: DoWhy Analysis (if available)
-        if DOWHY_AVAILABLE:
-            dowhy_results = causal_inf.dowhy_causal_analysis()
+        #if DOWHY_AVAILABLE:
+        dowhy_results = causal_inf.dowhy_causal_analysis()
 
         # Step 4: Sensitivity Analysis
         sensitivity_results = causal_inf.sensitivity_analysis()
 
-        # Step 5: Generate Report
+        # Step 5: Prepare modeling dataset
+        modeling_df = causal_inf.prepare_modeling_dataset()
+
+        # Step 6: Generate Report
         final_report = causal_inf.generate_causal_report()
 
         print(f"\n CAUSAL INFERENCE ANALYSIS COMPLETED!")
