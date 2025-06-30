@@ -13,7 +13,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('C:/Users/sheri/Downloads/final project/Causal_Inference/log/advanced_analytics.log'),
+        logging.FileHandler('C:/Users/sheri/Downloads/Causal_Inference_Project/Log/advanced_analytics.log'),
         logging.StreamHandler()
     ]
 )
@@ -26,7 +26,7 @@ class AdvancedAnalytics:
 
     def __init__(self):
         # Create plots directory
-        self.plots_dir = 'C:/Users/sheri/Downloads/final project/Causal_Inference/output'
+        self.plots_dir = 'C:/Users/sheri/Downloads/Causal_Inference_Project/output'
         if not os.path.exists(self.plots_dir):
             os.makedirs(self.plots_dir)
             logger.info(f"Created plots directory: {self.plots_dir}")

@@ -1,0 +1,5477 @@
+{
+  "causal_features": [
+    "GBP_USD_lag_5",
+    "CPI_lag_1",
+    "CPI_lag_10",
+    "CPI_lag_5",
+    "UnemploymentRate_lag_10",
+    "Daily_Return_lag_5",
+    "Rate_lag_1_diff",
+    "Rate_lag_1_diff",
+    "Daily_Return_lag_1",
+    "Daily_Return_lag_3",
+    "UnemploymentRate_lag_1",
+    "GBP_USD_lag_1",
+    "CPI_lag_20",
+    "Daily_Return_lag_2",
+    "UnemploymentRate_lag_5",
+    "Rate_lag_20_diff",
+    "Rate_lag_20_diff",
+    "UnemploymentRate_lag_20",
+    "Volume_Ratio_lag_1",
+    "GBP_USD_lag_10",
+    "BB_Position_lag_5",
+    "BB_Position_lag_3",
+    "RSI_14_lag_1",
+    "Rate_lag_5_diff",
+    "Rate_lag_5_diff",
+    "RSI_14_lag_3",
+    "RSI_14_lag_5",
+    "GBP_USD_lag_20",
+    "BB_Position_lag_1"
+  ],
+  "non_causal_features": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Volume",
+    "UnemploymentRate",
+    "CPI",
+    "Rate",
+    "GBP/USD",
+    "RSI_14",
+    "MACD",
+    "MACD_Signal",
+    "MACD_Histogram",
+    "Stoch_K",
+    "Stoch_D",
+    "SMA_20",
+    "SMA_50",
+    "SMA_200",
+    "EMA_12",
+    "EMA_26",
+    "SMA_20_50_Signal",
+    "BB_Upper",
+    "BB_Lower",
+    "BB_Width",
+    "BB_Position",
+    "ATR_14",
+    "Volume_SMA_20",
+    "Volume_Ratio",
+    "Daily_Return",
+    "Daily_Return_Abs",
+    "Return_5D",
+    "Return_10D",
+    "Return_20D",
+    "Volatility_20D",
+    "High_20D",
+    "Low_20D",
+    "Price_Position",
+    "UnemploymentRate_change",
+    "CPI_change",
+    "Rate_lag_1",
+    "Rate_lag_5",
+    "Rate_lag_10",
+    "Rate_lag_20",
+    "Rate_change",
+    "GBP_USD_change",
+    "MACD_lag_1",
+    "MACD_lag_3",
+    "MACD_lag_5",
+    "ATR_14_lag_1",
+    "ATR_14_lag_3",
+    "ATR_14_lag_5",
+    "Volatility_20D_lag_1",
+    "Volatility_20D_lag_3",
+    "Volatility_20D_lag_5",
+    "Volume_Ratio_lag_3",
+    "Volume_Ratio_lag_5",
+    "Market_Regime",
+    "VaR_95",
+    "Drawdown",
+    "Max_Drawdown",
+    "Sharpe_Ratio",
+    "Sector",
+    "Sector_Return",
+    "Rate_diff",
+    "Rate_lag_10_diff",
+    "SMA_20_diff",
+    "SMA_50_diff",
+    "SMA_200_diff",
+    "EMA_12_diff",
+    "EMA_26_diff",
+    "BB_Upper_diff",
+    "BB_Lower_diff",
+    "ATR_14_diff",
+    "Volume_SMA_20_diff",
+    "ATR_14_lag_1_diff",
+    "ATR_14_lag_3_diff",
+    "ATR_14_lag_5_diff",
+    "Open_diff",
+    "High_diff",
+    "Low_diff",
+    "Close_diff",
+    "High_20D_diff",
+    "Low_20D_diff",
+    "Max_Drawdown_diff"
+  ],
+  "macro_causal_features": [
+    "GBP_USD_lag_5",
+    "CPI_lag_1",
+    "CPI_lag_10",
+    "CPI_lag_5",
+    "UnemploymentRate_lag_10",
+    "Rate_lag_1_diff",
+    "Rate_lag_1_diff",
+    "UnemploymentRate_lag_1",
+    "GBP_USD_lag_1",
+    "CPI_lag_20",
+    "UnemploymentRate_lag_5",
+    "Rate_lag_20_diff",
+    "Rate_lag_20_diff",
+    "UnemploymentRate_lag_20",
+    "GBP_USD_lag_10",
+    "Rate_lag_5_diff",
+    "Rate_lag_5_diff",
+    "GBP_USD_lag_20"
+  ],
+  "technical_causal_features": [
+    "BB_Position_lag_5",
+    "BB_Position_lag_3",
+    "RSI_14_lag_1",
+    "RSI_14_lag_3",
+    "RSI_14_lag_5",
+    "BB_Position_lag_1"
+  ],
+  "price_causal_features": [
+    "Daily_Return_lag_5",
+    "Daily_Return_lag_1",
+    "Daily_Return_lag_3",
+    "Daily_Return_lag_2",
+    "Volume_Ratio_lag_1"
+  ],
+  "other_causal_features": [],
+  "feature_priority_ranking": [
+    "GBP_USD_lag_5",
+    "CPI_lag_1",
+    "CPI_lag_10",
+    "CPI_lag_5",
+    "UnemploymentRate_lag_10",
+    "Daily_Return_lag_5",
+    "Rate_lag_1_diff",
+    "Daily_Return_lag_1",
+    "Daily_Return_lag_3",
+    "UnemploymentRate_lag_1",
+    "GBP_USD_lag_1",
+    "CPI_lag_20",
+    "Daily_Return_lag_2",
+    "UnemploymentRate_lag_5",
+    "Rate_lag_20_diff",
+    "UnemploymentRate_lag_20",
+    "Volume_Ratio_lag_1",
+    "GBP_USD_lag_10",
+    "BB_Position_lag_5",
+    "BB_Position_lag_3",
+    "RSI_14_lag_1",
+    "Rate_lag_5_diff",
+    "RSI_14_lag_3",
+    "RSI_14_lag_5",
+    "GBP_USD_lag_20",
+    "BB_Position_lag_1"
+  ],
+  "causal_importance_scores": {
+    "GBP_USD_lag_5": 3.4378963730800316,
+    "CPI_lag_1": 3.30821303534849,
+    "CPI_lag_10": 3.2900303113319946,
+    "CPI_lag_5": 3.1432695141900995,
+    "UnemploymentRate_lag_10": 3.0232048368801245,
+    "Daily_Return_lag_5": 2.9822718108037334,
+    "Rate_lag_1_diff": 2.762679053391739,
+    "Daily_Return_lag_1": 2.731107224771382,
+    "Daily_Return_lag_3": 2.6986441645771992,
+    "UnemploymentRate_lag_1": 2.579708140013909,
+    "GBP_USD_lag_1": 2.578787300718447,
+    "CPI_lag_20": 2.5645950272547586,
+    "Daily_Return_lag_2": 2.5494835186262006,
+    "UnemploymentRate_lag_5": 2.516181534597109,
+    "Rate_lag_20_diff": 2.459746631947705,
+    "UnemploymentRate_lag_20": 2.378785166636173,
+    "Volume_Ratio_lag_1": 2.17785026149941,
+    "GBP_USD_lag_10": 1.9395318121194243,
+    "BB_Position_lag_5": 1.8529886067951957,
+    "BB_Position_lag_3": 1.6591685492222341,
+    "RSI_14_lag_1": 1.6215888766314333,
+    "Rate_lag_5_diff": 1.6047425172199083,
+    "RSI_14_lag_3": 1.5844411827417495,
+    "RSI_14_lag_5": 1.557514043546803,
+    "GBP_USD_lag_20": 1.4901167532106203,
+    "BB_Position_lag_1": 1.3272477680177233
+  },
+  "confounder_validation_results": {
+    "GBP_USD_lag_5": {
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.001285890905906719,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.41063766871798635,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.089316057606258e-12,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3454979679400849,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 6.970192122640371e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4286324784920049,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.2169459104770585e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.672434721063106e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.134701984423338e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.888906043765349e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.310125606728959e-12,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.830554640655708e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.6223099870144657e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 7.111743225818816e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3116516266338317,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.764201505909829e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.924902955724489e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.015728742073421745,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.3365928444490963e-12,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 8.302417022665391e-16,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.760964539743696e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.072740724898692e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.784941304575009e-14,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.1135241101840007e-09,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 9.256093920648013e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.830407674647626e-176,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 9.978106602450853e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0899178540976682,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.97576407190467e-18,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.18593996983692931,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.336109804411236e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.008728644080519836,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.4767798707181867e-22,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.15541194980287157,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.211377442924086e-18,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.037961324355059424,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.355634377588038e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06039331556105669,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 8.134351168206157e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0008382800916383017,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.4880387205698686e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0012342768898746107,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.3548360969244508e-13,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2760332387713752,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.2965515043655155e-17,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0029441885323786194,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 7.557476917772146e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.457824778109948e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "CPI_lag_1": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.41063766871798635,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.001285890905906719,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7723045786122128,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.9674357301038214e-15,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8532389182842439,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.482386010096331e-58,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.002786987321000818,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.205495024588451e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9126302777692785,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07243869474559171,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0030963938494229185,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.500718232770139e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.42965229363096247,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.762582528071243e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.005425324276345917,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.869805762296604e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0029560583758546253,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.061643579288889e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.20905301567601112,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.542600944164081e-08,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0021500919795951925,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.227713437485598e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4543069947961206,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.729188223494127e-05,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.09252829564517559,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.306865346704905e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.42987366602654054,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002106405856069757,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5058348496883244,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08323850579576347,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7509181646506528,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.11065378643990977,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5449110490343599,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07289904115342451,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7631391804218421,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03231303884735709,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6929184709102691,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0070770049183863,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6694989586144597,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3042483993213031,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.311000726389543,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.10922075417375354,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.305177687429471,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3555727935340315,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.39429092857790815,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1945602800848315,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.35529737022491004,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2735768700999545,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.050998453621647066,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.37128965024211413,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "CPI_lag_10": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3454979679400849,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.089316057606258e-12,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.9674357301038214e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7723045786122128,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 9.266275382014787e-35,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8317115156962023,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0028785873605964903,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.893375583480172e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9126266430793025,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.213438680271084e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0028604654857646026,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.652708131024496e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.30304321836702636,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05605031075572139,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7478339814666374,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.877082464537847e-14,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.002680931167303567,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.764353527629626e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07871224441959972,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.647022360934328e-08,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0025521480562224357,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.473322749685833e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4273342126915649,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.237921823458623e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.13096383726094227,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.5155988214634316e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.41791674956021896,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00015714356070775372,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.310090238423654,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.10281636630110144,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5642549239597605,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3557884600341733,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8243412450151532,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05325934689740649,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6554158790551364,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6975208246911899,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.41992288177138803,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1953987834777334,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8649298389602734,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2304563828617774,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.14940777929199053,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.40250054513775446,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6263365032484649,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.43933499034668533,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.40762528294638833,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9017689667985833,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5588246956899106,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9189548519118842,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.16323612657978595,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.13505307148452514,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "CPI_lag_5": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4286324784920049,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.970192122640371e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 5.482386010096331e-58,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8532389182842439,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8317115156962023,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.266275382014787e-35,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00282778424527012,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.756017135366766e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06894604290884809,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.033906504448888e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.002747201234010329,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.114353070909672e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4001948676993665,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.395325470008106e-11,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6909721089993603,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.073635784497412e-10,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0029989404072798603,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.227138655036242e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4056865640811769,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.0628960861365e-08,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0021395482813123777,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.027967949489681e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4564049451286851,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.2324455874648727e-06,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9091543999186329,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.864287797109925e-08,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.36397903844783497,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.947642607939231e-06,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7731877252216909,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3038490458922731,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7730880849911328,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.12891275211676734,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9103050781287155,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3106278896729884,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8790089070460412,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.024062971285804716,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8825129323064371,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07359716323295952,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9265307021247295,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.19795180588533634,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5125245905880489,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3506804825141103,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8455095474040686,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5835847680505994,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6450099624682042,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.19236206562380287,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5836486195679615,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1520873457972477,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.04378150321792441,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.0605345169338741e-08,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "UnemploymentRate_lag_10": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.672434721063106e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.2169459104770585e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 8.205495024588451e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002786987321000818,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.893375583480172e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0028785873605964903,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 7.756017135366766e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00282778424527012,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.22859116749945002,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.0855054957943669e-10,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9911504826045496,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00011203528174171348,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.824034034739183e-15,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.696628558465834e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002676516235690019,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9931732832826082,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1858634504169448,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.0844912080368354e-10,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.09552760299309387,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.539172849159102e-269,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.002607405047666e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.650868967194967e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.373769897089909e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.670738201453943e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.24991627216555e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.079807768597274e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.12664620334248625,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4581314341928151,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07282291982324159,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2058049565529577,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.007509967241417031,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03275706710163449,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.029459646424276634,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08138104415970261,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.039957652477962055,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.16765321513808035,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.02994214641188845,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05120443054561971,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.38537287274976967,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08479675842449647,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.026070820278245827,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08449481167931618,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7249458425091468,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.019693442612649124,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8075071714051822,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.30045854035701736,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.03444724039064653,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.000862587710864796,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "Daily_Return_lag_5": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0008382800916383017,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.134351168206157e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.10922075417375354,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.311000726389543,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.40250054513775446,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.14940777929199053,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3506804825141103,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5125245905880489,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08479675842449647,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.38537287274976967,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 4.119400194112209e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.14809560148987452,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.21317892421418022,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.005955644438962999,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 7.21433437155273e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07133217749988936,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0375566658114889,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.24898533455755012,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.16192870212337887,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.021910653907258285,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2111541423024266,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0068833762218620045,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.27471524652205304,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.01930022288002826,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0009541571430882126,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.2294535608571568e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 7.43935308950035e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.320570843183694e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.17723467292732062,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.025504674732563674,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.10283388513053592,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00031861068988206027,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0006080356429869933,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06318069124572163,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.11683362597355776,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05661721932056043,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1856019822454772,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0006930011922393396,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.9145125991304517e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08571273382757304,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.5340070946363514e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.3193197078381575e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06011329264247335,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "Rate_lag_1_diff": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.888906043765349e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.134701984423338e-09,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07243869474559171,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9126302777692785,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 3.213438680271084e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9126266430793025,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 3.033906504448888e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06894604290884809,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.0855054957943669e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.22859116749945002,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0024088624768821548,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8176632431908855,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.30939793687092343,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.715845328328986e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 4.628014792718e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9139311244543064,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.0296740520713241e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.187033772577723e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7788485032511044,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7788485032511044,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 6.6282480164367e-16,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06684454556811217,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.263335265601278e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.003141896271604705,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.024841797853683647,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": false
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.6830779576651776e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0005344664834585249,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.34557104970054664,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.001084849715333356,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.23142240147785254,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.051245187303052595,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.380607687032587,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.014861307636326457,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1563005136602364,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03993520482261415,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7137505969143405,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0012563222650005287,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3081671393280099,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.17484109997224145,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.14809560148987452,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.119400194112209e-11,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.04675340282294732,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.005808101773103118,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0039827555018297125,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.393346950216691e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.7237808790887737e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.0885281043429457e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.11629716759593842,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6127302669052402,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "Daily_Return_lag_1": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0012342768898746107,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.4880387205698686e-15,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3555727935340315,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.305177687429471,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.43933499034668533,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6263365032484649,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5835847680505994,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8455095474040686,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08449481167931618,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.026070820278245827,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.005808101773103118,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.04675340282294732,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.16452859296328937,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.013543605217459368,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0008406680587783222,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.0296690524256806e-08,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7884588323410968,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7543967815858306,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.14750661930532136,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.30525937156943456,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.13450329768834535,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.19618171401884274,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9160237656982563,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03172732379808834,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.22053770155721317,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0005058685264501141,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.03531485599531349,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.279100637165205e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.10198557871811703,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.39158316952606115,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.033068353742316876,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.036628150804944734,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05270503582935008,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.15016778757932459,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.014190242517723724,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.011830915383450996,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.09615178882506989,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0001921047738442138,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.9145125991304517e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08961178524466212,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.35783394809249763,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06554346425681293,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0002174020070952175,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "Daily_Return_lag_3": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2760332387713752,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.3548360969244508e-13,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1945602800848315,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.39429092857790815,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9017689667985833,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.40762528294638833,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.19236206562380287,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6450099624682042,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.019693442612649124,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7249458425091468,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 9.393346950216691e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0039827555018297125,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7267663358362886,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.09872321238828632,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.934229162176688e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.006835858716168983,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.049111389979392475,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.36289689232152966,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05716578706096841,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06275771233430015,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.18959648472612595,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.061449449805580966,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6499245636438424,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3389643218002721,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5338047594322737,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00017019143284639944,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.01694406740094661,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.226117733840559e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08937256999844213,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.17141712718344437,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0387132403354114,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.09866303070321329,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00023495282976411237,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.09550097936810158,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05298587019793895,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.16606697647605964,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.01481134611400962,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00042746531150449215,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08571273382757304,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08961178524466212,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0820452948408115,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.9218790334682418e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.009749861186137842,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "UnemploymentRate_lag_1": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.830554640655708e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.310125606728959e-12,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.500718232770139e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0030963938494229185,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.652708131024496e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0028604654857646026,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.114353070909672e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002747201234010329,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9911504826045496,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8176632431908855,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0024088624768821548,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.862911588285363e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.859338669427784e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.3564726610346587e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0035863392010206676,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.993768883719442,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.18188718100910833,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.2197244651175208e-09,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.750081535027825e-28,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.221101634265249e-110,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.48078927757808e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.144685241133571e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.015856301315514073,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.409358645168403e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.4591369287589677e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.195819473510287e-09,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.004693966680625987,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.17701754573371348,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.04105584217547297,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5896367332108486,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.004959783648678402,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08314774667981359,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.030713485974987416,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.590355701226837,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.008180515571444532,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.11119889163503249,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0021836328319882405,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.35904769720931556,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.005955644438962999,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.21317892421418022,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.013543605217459368,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.16452859296328937,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.09872321238828632,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7267663358362886,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00345122006343673,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7711580239565281,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0012958609349523601,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.11486174366463263,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "GBP_USD_lag_1": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.6223099870144657e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 6.762582528071243e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.42965229363096247,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05605031075572139,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.30304321836702636,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.395325470008106e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4001948676993665,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.824034034739183e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00011203528174171348,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 3.715845328328986e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.30939793687092343,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.859338669427784e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.862911588285363e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 6.566994426028166e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.26218742579012183,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.701489054050391e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.062917270763467e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.003338074696999491,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.414986027731628e-09,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.238074940581444e-12,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.2078284048356854e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 7.70676447177146e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.5537924029497406e-17,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.715426421085899e-22,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0379609841028712,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.6055593314864537e-104,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.004235279850202772,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.4477451806277006e-13,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.20888598147528256,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.5564901574659727e-14,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.347820118525212e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.038119793588381495,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.014430969574517696,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.4911244364102642e-19,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.011985588089818708,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.3170542317217572e-15,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.698525000040894e-12,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08997239109008666,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07133217749988936,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.21433437155273e-09,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.0296690524256806e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0008406680587783222,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.006835858716168983,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.934229162176688e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0004384661827657501,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.835783156788768e-08,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 4.6755983084134715e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.12422385346319076,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "CPI_lag_20": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3116516266338317,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.111743225818816e-05,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.869805762296604e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.005425324276345917,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 8.877082464537847e-14,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7478339814666374,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.073635784497412e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6909721089993603,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.002676516235690019,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.696628558465834e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9139311244543064,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.628014792718e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0035863392010206676,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.3564726610346587e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.26218742579012183,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.566994426028166e-06,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0029015035458470717,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.4297848665314606e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.905946345359476,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.393462547052665e-08,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.002643054812230171,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.253898872971079e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.34192580076087264,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05830324833627413,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5341613367614837,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.0967523482648146e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4246568556118667,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.801748116130158e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4605093467232164,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00615758970044949,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6877954813913434,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.010784830203071064,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8668697379384612,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5586163548816387,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6527435747357242,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.007678462894226223,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5248487753477198,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002712951983386708,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8907477899532911,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2589294393327238,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.24898533455755012,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0375566658114889,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7543967815858306,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7884588323410968,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.36289689232152966,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.049111389979392475,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5532289550329734,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.10747350855900155,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.12105164541572233,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.011737144162872457,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "Daily_Return_lag_2": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0029441885323786194,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.2965515043655155e-17,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2735768700999545,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.35529737022491004,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9189548519118842,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5588246956899106,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1520873457972477,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5836486195679615,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.30045854035701736,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8075071714051822,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.0885281043429457e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.7237808790887737e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7711580239565281,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00345122006343673,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 9.835783156788768e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0004384661827657501,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.10747350855900155,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5532289550329734,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0281003977965213,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07168673800152157,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.21168338605041784,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.34457077807874076,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5390483258273192,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.043172136769795845,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2753824477139491,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0005977166695162314,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.039817237543723114,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.7657687318042374e-09,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.14549715029647564,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.28051976173472426,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07619766126770364,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.11350638751522137,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2013208683638321,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.04700212798101718,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.029471840454860548,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.023000507086655606,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.5340070946363514e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.35783394809249763,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.0820452948408115,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.9085350385875004e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0003056838315693976,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "UnemploymentRate_lag_5": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.924902955724489e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.764201505909829e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 8.061643579288889e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0029560583758546253,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.764353527629626e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002680931167303567,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.227138655036242e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0029989404072798603,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.9931732832826082,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.187033772577723e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.0296740520713241e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.993768883719442,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.062917270763467e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.701489054050391e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.4297848665314606e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0029015035458470717,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.18082285117250294,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.3170729809280978e-09,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7423672592234025,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.975468051811296e-150,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.2895566828346016e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.1298717260059782e-17,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8429589704226601,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.823024572302559e-15,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.0481188597094e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.3997198790180589e-15,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.009838267385940574,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.36051671166767807,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.04955922614384271,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1540034044051845,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00938097961381787,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.25996839026899105,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0162964655031114,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.021429702154977952,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0047946239500700535,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08386290065152768,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0308339953739423,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4410278978061368,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.021910653907258285,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.16192870212337887,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.30525937156943456,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.14750661930532136,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06275771233430015,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05716578706096841,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07168673800152157,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0281003977965213,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07083369458779826,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0003842359932645648,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "Rate_lag_20_diff": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.3365928444490963e-12,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.015728742073421745,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 4.542600944164081e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.20905301567601112,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 4.647022360934328e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07871224441959972,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 4.0628960861365e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4056865640811769,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.0844912080368354e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1858634504169448,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7788485032511044,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7788485032511044,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.2197244651175208e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.18188718100910833,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.414986027731628e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.003338074696999491,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 5.393462547052665e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.905946345359476,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.3170729809280978e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.18082285117250294,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.1332361311333737e-14,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8436242647482581,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.0073934264649184e-24,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.9321905231015766e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7788485032511044,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7788485032554597,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 9.830937646927254e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.573363879755366e-14,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3989660859389307,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2237066215535431,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4522134601115929,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.09910362796951107,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6399009294971574,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.015173430483063109,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5778067747885801,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07143499000825451,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5170469116295646,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.15614822008127688,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5416944412684908,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.004012049639007419,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0068833762218620045,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2111541423024266,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.19618171401884274,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.13450329768834535,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.061449449805580966,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.18959648472612595,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.34457077807874076,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.21168338605041784,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.019444826165362906,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.23936009045349035,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "UnemploymentRate_lag_20": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.760964539743696e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 8.302417022665391e-16,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 8.227713437485598e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0021500919795951925,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 7.473322749685833e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0025521480562224357,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 8.027967949489681e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0021395482813123777,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 3.539172849159102e-269,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.09552760299309387,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06684454556811217,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.6282480164367e-16,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.221101634265249e-110,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.750081535027825e-28,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.2078284048356854e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.238074940581444e-12,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.253898872971079e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002643054812230171,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 5.975468051811296e-150,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7423672592234025,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.8436242647482581,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.1332361311333737e-14,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 9.369082978619659e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.902775605814926e-14,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.039471157341539796,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.5410700381656814e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 6.158616634890291e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.4419252791040386e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3258724116710479,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.24464476922581482,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.45137741289260147,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.21233802240758948,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.11850951448806692,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5209453216731869,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4804908522832535,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.41075339874957806,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.16799405151189087,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2753653408504682,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2894887415998506,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3452845058712565,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.01930022288002826,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.27471524652205304,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.03172732379808834,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9160237656982563,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3389643218002721,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6499245636438424,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.043172136769795845,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5390483258273192,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.28226780343701025,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5975673786672417,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "Volume_Ratio_lag_1": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.457824778109948e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.557476917772146e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.37128965024211413,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.050998453621647066,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.13505307148452514,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.16323612657978595,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.0605345169338741e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.04378150321792441,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.000862587710864796,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03444724039064653,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6127302669052402,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.11629716759593842,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.11486174366463263,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0012958609349523601,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.12422385346319076,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.6755983084134715e-06,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.011737144162872457,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.12105164541572233,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0003842359932645648,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07083369458779826,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.23936009045349035,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.019444826165362906,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5975673786672417,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.28226780343701025,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0010875498868546263,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1457995435904447,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.036458464166021026,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.001884599949343793,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.538517145030031,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.13370929775862997,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.02230550083161449,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00021770082662601257,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00027935823710598806,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0003584437339133308,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.7463341583381545e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.042141782906216764,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0019366850754431767,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.7176774035593347e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.10623968511788863,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.241429389182591e-05,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 7.253157401128477e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1049840685768968,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06011329264247335,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.3193197078381575e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0002174020070952175,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06554346425681293,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.009749861186137842,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.9218790334682418e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0003056838315693976,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.9085350385875004e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "GBP_USD_lag_10": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 4.072740724898692e-08,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 3.729188223494127e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4543069947961206,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 7.237921823458623e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4273342126915649,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.2324455874648727e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4564049451286851,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.650868967194967e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.002607405047666e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.003141896271604705,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.263335265601278e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 7.144685241133571e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.48078927757808e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.70676447177146e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05830324833627413,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.34192580076087264,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.1298717260059782e-17,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.2895566828346016e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.9321905231015766e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.0073934264649184e-24,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 9.902775605814926e-14,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.369082978619659e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.002568207171625346,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.460813403503783e-11,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.978866337562115e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00021799347553239665,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03346487966314734,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0023475558244711544,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.577535977027152,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00025794720253163915,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5175256664718815,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0014754183155917754,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7493557158931915,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00019815112539055266,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.008706284710148221,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00624126327763278,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.31106924503888966,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.2294535608571568e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0009541571430882126,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0005058685264501141,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.22053770155721317,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00017019143284639944,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5338047594322737,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0005977166695162314,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2753824477139491,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1457995435904447,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0010875498868546263,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "BB_Position_lag_5": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.0899178540976682,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.978106602450853e-15,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08323850579576347,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5058348496883244,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.10281636630110144,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.310090238423654,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3038490458922731,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7731877252216909,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4581314341928151,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.12664620334248625,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.001084849715333356,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.34557104970054664,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.17701754573371348,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.004693966680625987,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.4477451806277006e-13,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.004235279850202772,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00615758970044949,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4605093467232164,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.36051671166767807,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.009838267385940574,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2237066215535431,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3989660859389307,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.24464476922581482,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3258724116710479,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.03346487966314734,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00021799347553239665,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05561966476272661,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00804990538430105,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.009923124684308064,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.17882781020247596,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.01031078422135415,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06873456360953177,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.21256508658337675,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.01600007631002478,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.026293094676073235,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00030800783742142404,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00031861068988206027,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.10283388513053592,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.033068353742316876,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0387132403354114,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07619766126770364,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00021770082662601257,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.02230550083161449,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "BB_Position_lag_3": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.18593996983692931,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.97576407190467e-18,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.11065378643990977,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7509181646506528,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3557884600341733,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5642549239597605,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.12891275211676734,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7730880849911328,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2058049565529577,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.07282291982324159,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.051245187303052595,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.23142240147785254,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5896367332108486,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.04105584217547297,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.5564901574659727e-14,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.20888598147528256,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.010784830203071064,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6877954813913434,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1540034044051845,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.04955922614384271,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.09910362796951107,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4522134601115929,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.21233802240758948,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.45137741289260147,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.577535977027152,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0023475558244711544,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.0563040530870643,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002257128591989694,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0082906956106032,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.14927994054784238,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.01031078422135415,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.18140642940188914,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.014738358447681439,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.026454784346222903,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00189781282801288,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.008765071823046278,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0006080356429869933,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.036628150804944734,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00023495282976411237,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.09866303070321329,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.11350638751522137,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0003584437339133308,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00027935823710598806,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "RSI_14_lag_1": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.008728644080519836,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.336109804411236e-08,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07289904115342451,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5449110490343599,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05325934689740649,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8243412450151532,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3106278896729884,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9103050781287155,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.03275706710163449,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.007509967241417031,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.014861307636326457,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.380607687032587,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08314774667981359,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.004959783648678402,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.038119793588381495,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.347820118525212e-15,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5586163548816387,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8668697379384612,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.25996839026899105,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00938097961381787,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.015173430483063109,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6399009294971574,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5209453216731869,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.11850951448806692,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.5175256664718815,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00025794720253163915,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.054011171734621784,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.021418275783117797,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1128817812336775,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.19578669941042395,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06873456360953177,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.18140642940188914,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.020523327548638188,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.03805582936910904,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.026079768611701505,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.015038603946753704,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06318069124572163,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.15016778757932459,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05270503582935008,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.09550097936810158,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2013208683638321,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.042141782906216764,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.7463341583381545e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "Rate_lag_5_diff": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.1135241101840007e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 3.784941304575009e-14,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 1.306865346704905e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.09252829564517559,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.5155988214634316e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.13096383726094227,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 9.864287797109925e-08,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9091543999186329,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 3.670738201453943e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.373769897089909e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.024841797853683647,
+        "conf_to_treatment_sig": false,
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.409358645168403e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.015856301315514073,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.715426421085899e-22,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.5537924029497406e-17,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 4.0967523482648146e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5341613367614837,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 8.823024572302559e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8429589704226601,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7788485032554597,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7788485032511044,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.5410700381656814e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.039471157341539796,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.460813403503783e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.002568207171625346,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 5.699466338029176e-12,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.12810742821808416,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00804990538430105,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05561966476272661,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.002257128591989694,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0563040530870643,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.021418275783117797,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.054011171734621784,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0044912380087765115,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.12889820407617567,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.017915948359466506,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.012003376703202034,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.01008793115001922,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.21858413881673283,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 7.320570843183694e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.43935308950035e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.279100637165205e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03531485599531349,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.226117733840559e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.01694406740094661,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.7657687318042374e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.039817237543723114,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.001884599949343793,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.036458464166021026,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "RSI_14_lag_3": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.15541194980287157,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.4767798707181867e-22,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.03231303884735709,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7631391804218421,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.6975208246911899,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6554158790551364,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.024062971285804716,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8790089070460412,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08138104415970261,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.029459646424276634,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.03993520482261415,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1563005136602364,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.590355701226837,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.030713485974987416,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.4911244364102642e-19,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.014430969574517696,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.007678462894226223,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6527435747357242,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.021429702154977952,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0162964655031114,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07143499000825451,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5778067747885801,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.41075339874957806,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4804908522832535,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.7493557158931915,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0014754183155917754,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.12889820407617567,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0044912380087765115,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.026831108259028628,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.13494551389390577,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.21256508658337675,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.026454784346222903,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.014738358447681439,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.020523327548638188,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.025488138918351624,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0015708074465836733,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.11683362597355776,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.014190242517723724,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.16606697647605964,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05298587019793895,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.04700212798101718,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 2.7176774035593347e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0019366850754431767,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      }
+    },
+    "RSI_14_lag_5": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.037961324355059424,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.211377442924086e-18,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0070770049183863,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6929184709102691,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1953987834777334,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.41992288177138803,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.07359716323295952,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8825129323064371,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.16765321513808035,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.039957652477962055,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0012563222650005287,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.7137505969143405,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.11119889163503249,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.008180515571444532,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.3170542317217572e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.011985588089818708,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.002712951983386708,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5248487753477198,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08386290065152768,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0047946239500700535,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.15614822008127688,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5170469116295646,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2753653408504682,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.16799405151189087,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.008706284710148221,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00019815112539055266,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.012003376703202034,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.017915948359466506,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.015360326292479718,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.04696292694681978,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.026293094676073235,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.01600007631002478,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00189781282801288,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.03805582936910904,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.025488138918351624,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.782250367741078e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1856019822454772,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.05661721932056043,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.011830915383450996,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.01481134611400962,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.029471840454860548,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 2.241429389182591e-05,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.10623968511788863,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "GBP_USD_lag_20": {
+      "GBP_USD_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.830407674647626e-176,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.256093920648013e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.002106405856069757,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.42987366602654054,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.00015714356070775372,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.41791674956021896,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 3.947642607939231e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.36397903844783497,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 5.079807768597274e-11,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.24991627216555e-06,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0005344664834585249,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.6830779576651776e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.195819473510287e-09,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.4591369287589677e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.6055593314864537e-104,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0379609841028712,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": true,
+        "conf_to_treatment_p": 7.801748116130158e-07,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.4246568556118667,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.3997198790180589e-15,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.0481188597094e-05,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": false,
+        "conf_to_treatment_p": 4.573363879755366e-14,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 9.830937646927254e-10,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.4419252791040386e-10,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 6.158616634890291e-07,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 1.978866337562115e-08,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.12810742821808416,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 5.699466338029176e-12,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.17882781020247596,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.009923124684308064,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.14927994054784238,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0082906956106032,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.19578669941042395,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.1128817812336775,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.13494551389390577,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.026831108259028628,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.04696292694681978,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.015360326292479718,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.15038157787811884,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.06688888923181505,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.025504674732563674,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.17723467292732062,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.39158316952606115,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.10198557871811703,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.17141712718344437,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.08937256999844213,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.28051976173472426,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.14549715029647564,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.13370929775862997,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.538517145030031,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      }
+    },
+    "BB_Position_lag_1": {
+      "GBP_USD_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06039331556105669,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.355634377588038e-07,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3042483993213031,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.6694989586144597,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2304563828617774,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8649298389602734,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "CPI_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.19795180588533634,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.9265307021247295,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.05120443054561971,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.02994214641188845,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_1_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.17484109997224145,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.3081671393280099,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.35904769720931556,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0021836328319882405,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.08997239109008666,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 2.698525000040894e-12,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "CPI_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.2589294393327238,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.8907477899532911,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_5": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.4410278978061368,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0308339953739423,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_20_diff": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.004012049639007419,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.5416944412684908,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "UnemploymentRate_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.3452845058712565,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.2894887415998506,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "GBP_USD_lag_10": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.31106924503888966,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.00624126327763278,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "Rate_lag_5_diff": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.21858413881673283,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.01008793115001922,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      },
+      "GBP_USD_lag_20": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.06688888923181505,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.15038157787811884,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "False"
+      },
+      "BB_Position_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00030800783742142404,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "BB_Position_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.008765071823046278,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_1": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.015038603946753704,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.026079768611701505,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0015708074465836733,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "RSI_14_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 1.782250367741078e-06,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_5": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.0006930011922393396,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_1": {
+        "is_valid": true,
+        "conf_to_treatment_p": 0.0001921047738442138,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.09615178882506989,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "False"
+      },
+      "Daily_Return_lag_3": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.00042746531150449215,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Daily_Return_lag_2": {
+        "is_valid": false,
+        "conf_to_treatment_p": 0.023000507086655606,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 0.0,
+        "conf_to_treatment_sig": "True",
+        "treatment_to_conf_sig": "True"
+      },
+      "Volume_Ratio_lag_1": {
+        "is_valid": "False",
+        "conf_to_treatment_p": 0.1049840685768968,
+        "conf_to_outcome": true,
+        "treatment_to_conf_p": 7.253157401128477e-06,
+        "conf_to_treatment_sig": "False",
+        "treatment_to_conf_sig": "True"
+      }
+    }
+  },
+  "target_variable": "Target_Direction",
+  "modeling_approach": "keep_lag_diff_names",
+  "confounder_selection_method": "enhanced_validation",
+  "analysis_summary": {
+    "total_features_tested": 45,
+    "significant_relationships": 29,
+    "dataset_shape": [
+      12894,
+      116
+    ],
+    "analysis_date": "2025-06-30 20:46:58.611435"
+  }
+}
