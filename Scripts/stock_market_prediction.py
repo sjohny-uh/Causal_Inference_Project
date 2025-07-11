@@ -319,6 +319,7 @@ class ModelEvaluator:
         plt.close()
 
         # 2. Performance Metrics Heatmap
+        '''
         fig, ax = plt.subplots(figsize=(12, 8))
 
         pivot_data = results_df.pivot_table(
@@ -333,7 +334,28 @@ class ModelEvaluator:
         plt.tight_layout()
         plt.savefig(f'{output_dir}/performance_heatmap.png', dpi=300, bbox_inches='tight')
         plt.close()
+        '''
+        # Melt the DataFrame to long format
+        melted = results_df.melt(id_vars=['Model', 'Dataset'], 
+                                 value_vars=['Test_Accuracy', 'Test_F1', 'Sharpe_Ratio'],
+                                 var_name='Metric', value_name='Value')
 
+        # Create a new column combining Metric and Dataset for unique columns
+        melted['Metric_Dataset'] = melted['Metric'] + '_' + melted['Dataset']
+
+        # Pivot to get a flat table
+        pivot_data = melted.pivot(index='Model', columns='Metric_Dataset', values='Value')
+
+        # Plot
+        fig, ax = plt.subplots(figsize=(12, 8))
+        sns.heatmap(pivot_data, annot=True, fmt='.3f', cmap='RdYlBu_r', ax=ax)
+        ax.set_title('Model Performance Heatmap')
+        plt.tight_layout()
+        plt.savefig(f'{output_dir}/performance_heatmap.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        
+        
+        
         # 3. Sharpe Ratio vs Accuracy Scatter
         fig, ax = plt.subplots(figsize=(10, 8))
 
