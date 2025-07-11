@@ -1,7 +1,9 @@
-This Folder contains three datasets 
+## Datasets Used
 
-1)cpih01-time-series-v57.csv
-
-2)Unemployment_series-180525.csv
-
-3)Bank_Rate_history_and_data_ Bank_of_England_Database.csv
+| Dataset | Source | Frequency |
+|--------|--------|-----------|
+| FTSE 100 Stocks (e.g., AZN.L, HSBA.L) | [Yahoo Finance](https://finance.yahoo.com/) via `yfinance` | Daily |
+| UK Consumer Price Index (CPI) | [ONS](https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/l522/mm23) | Monthly |
+| Bank of England Base Rate | [BoE](https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp) | Irregular |
+| GBP/USD Exchange Rate | [Yahoo Finance](https://finance.yahoo.com/) via `yfinance` | Daily |
+| Unemployment Rate (UK) | [ONS](https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms) | Monthly |

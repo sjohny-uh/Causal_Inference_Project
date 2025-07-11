@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('C:/Users/sheri/Downloads/Causal_Inference_Project/Log/uk_stock_analysis.log'),
+        logging.FileHandler('/content/sample_data/Log/uk_stock_analysis.log'),
         logging.StreamHandler()
     ]
 )
@@ -51,7 +51,7 @@ class UKStockAnalyzer:
         self.final_df = None
 
         # Create plots directory
-        self.plots_dir = 'C:/Users/sheri/Downloads/Causal_Inference_Project/Output'
+        self.plots_dir = '/content/sample_data/Output'
         if not os.path.exists(self.plots_dir):
             os.makedirs(self.plots_dir)
             logger.info(f"Created plots directory: {self.plots_dir}")
@@ -157,7 +157,7 @@ class UKStockAnalyzer:
         print("- Processing CPI data...")
         logger.info("Processing CPI data")
         try:
-            cpi_raw = pd.read_csv('/Data/cpih01-time-series-v57.csv')
+            cpi_raw = pd.read_csv('/content/sample_data/cpih01-time-series-v57.csv')
             # Convert 'Time' to datetime (monthly frequency)
             cpi_raw['Date'] = pd.to_datetime(cpi_raw['Time'], format='%b-%y', errors='coerce')
 
@@ -184,7 +184,7 @@ class UKStockAnalyzer:
         logger.info("Processing Bank Rate data")
         try:
 
-            rate_df = pd.read_csv('/Data/Bank_Rate_history_and_data_ Bank_of_England_Database.csv')
+            rate_df = pd.read_csv('/content/sample_data/Bank_Rate_history_and_data_Bank_of_England_Database.csv')
             # Rename columns
             rate_df.columns = ['Date Changed', 'Rate']
             rate_df['Date'] = pd.to_datetime(rate_df['Date Changed'], errors='coerce')
@@ -206,7 +206,7 @@ class UKStockAnalyzer:
         logger.info("Processing Unemployment data")
         try:
 
-            df = pd.read_csv("/Data/Unemployment_series-180525.csv", skiprows=8)
+            df = pd.read_csv("/content/sample_data/Unemployment_series-180525.csv", skiprows=8)
             df.columns = ["Date", "UnemploymentRate"]
 
             # Keep only monthly data (rows where the date contains a month abbreviation, e.g., 'FEB')
@@ -392,7 +392,7 @@ class UKStockAnalyzer:
                 group['High_20D'] = high.rolling(window=20).max()
                 group['Low_20D'] = low.rolling(window=20).min()
                 group['Price_Position'] = (close - group['Low_20D']) / (group['High_20D'] - group['Low_20D'])
-                
+
                 group['VaR_95'] = group['Daily_Return'].rolling(window=252).quantile(0.05)
                 cumulative_returns = (1 + group['Daily_Return']).cumprod()
                 running_max = cumulative_returns.expanding().max()
@@ -761,11 +761,11 @@ class UKStockAnalyzer:
         axes[1,0].tick_params(axis='x', rotation=45)
 
         # Volatility over time
-        monthly_vol = self.final_df.groupby(self.final_df['Date'].dt.to_period('M'))['Daily_Return'].std()
-        axes[1,1].plot(monthly_vol.index.astype(str), monthly_vol.values,
+        yearly_vol = self.final_df.groupby(self.final_df['Date'].dt.to_period('Y'))['Daily_Return'].std()
+        axes[1,1].plot(yearly_vol.index.astype(str), yearly_vol.values,
                       marker='o', linewidth=2)
         axes[1,1].set_title('Market Volatility Over Time', fontweight='bold')
-        axes[1,1].set_xlabel('Month')
+        axes[1,1].set_xlabel('Year')
         axes[1,1].set_ylabel('Volatility')
         axes[1,1].tick_params(axis='x', rotation=45)
 

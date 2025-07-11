@@ -6,6 +6,7 @@ from sklearn.linear_model import LassoCV
 from sklearn.preprocessing import StandardScaler
 import json
 import warnings
+import matplotlib.pyplot as plt
 warnings.filterwarnings('ignore')
 
 class FeatureSelector:
@@ -152,15 +153,15 @@ class FeatureSelector:
         """Save metadata to JSON file"""
         metadata = self.create_metadata(method)
 
-        # Store in modeling_df.attrs for compatibility
-        self.modeling_df.attrs['causal_features'] = self.selected_features
-        self.modeling_df.attrs['non_causal_features'] = metadata['non_selected_features']
-        self.modeling_df.attrs['macro_causal_features'] = metadata['macro_selected_features']
-        self.modeling_df.attrs['technical_causal_features'] = metadata['technical_selected_features']
-        self.modeling_df.attrs['price_causal_features'] = metadata['price_selected_features']
-        self.modeling_df.attrs['other_causal_features'] = metadata['other_selected_features']
+       # Store in modeling_df.attrs for compatibility
+        self.modeling_df.attrs['selected_features'] = self.selected_features
+        self.modeling_df.attrs['selected_features'] = metadata['selected_features']
+        self.modeling_df.attrs['macro_selected_features'] = metadata['macro_selected_features']
+        self.modeling_df.attrs['technical_selected_features'] = metadata['technical_selected_features']
+        self.modeling_df.attrs['price_selected_features'] = metadata['price_selected_features']
+        self.modeling_df.attrs['other_selected_features'] = metadata['other_selected_features']
         self.modeling_df.attrs['feature_priority_ranking'] = metadata['feature_priority_ranking']
-        self.modeling_df.attrs['causal_importance_scores'] = metadata['feature_importance_scores']
+        self.modeling_df.attrs['feature_importance_scores'] = metadata['feature_importance_scores']
 
         # Save to JSON
         with open(filepath, 'w') as f:
@@ -171,11 +172,44 @@ class FeatureSelector:
 
         return metadata
 
+    def plot_feature_importance(self, metadata_path='feature_selection_metadata.json', top_n=10, save_path='/content/sample_data/Output/feature_importance_plot.png'):
+      """
+      Plots the top N feature importances from the feature_selection_metadata.json file.
+
+      Args:
+          metadata_path (str): Path to the feature_selection_metadata.json file.
+          top_n (int): Number of top features to plot.
+          save_path (str): If provided, saves the plot to this path.
+      """
+      # Load metadata
+      with open(metadata_path, 'r') as f:
+          metadata = json.load(f)
+
+      # Extract and sort importances
+      importances_dict = metadata['feature_importance_scores']
+      sorted_items = sorted(importances_dict.items(), key=lambda x: x[1], reverse=True)[:top_n]
+      top_features = [item[0] for item in sorted_items]
+      top_importances = [item[1] for item in sorted_items]
+
+      # Plot
+      plt.figure(figsize=(8, 5))
+      bars = plt.barh(top_features[::-1], top_importances[::-1], color='skyblue')
+      plt.xlabel('Importance Score')
+      plt.title(f'Top {top_n} Features by Random Forest Importance')
+      ax = plt.gca()  # Get current axes
+      ax.tick_params(axis='y', labelsize=8)  # Set y-axis font size
+
+      plt.tight_layout()
+      if save_path:
+          plt.savefig(save_path, dpi=300)
+      #plt.show()
+
 def run_feature_selection(df, target_variable='Target_Direction', method='lasso', max_features=30):
     """Run feature selection analysis"""
     selector = FeatureSelector(df, target_variable)
     selected_features = selector.select_features(method=method, max_features=max_features)
     metadata = selector.save_metadata(method=method)
+    selector.plot_feature_importance('feature_selection_metadata.json', 30, '/content/sample_data/Output/feature_importance_plot')
 
     print(f"\nFeature Selection Results:")
     print(f"Method: {method}")

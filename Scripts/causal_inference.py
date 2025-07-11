@@ -6,6 +6,7 @@ import warnings
 import json
 import logging
 import os
+import matplotlib.pyplot as plt
 
 warnings.filterwarnings('ignore')
 
@@ -20,7 +21,7 @@ class CausalInferenceAnalyzer:
         self.causal_features = []
         self.modeling_df = None
 
-        self.plots_dir = 'C:/Users/sheri/Downloads/Causal_Inference_Project/Output'
+        self.plots_dir = '/content/sample_data/Output'
         if not os.path.exists(self.plots_dir):
             os.makedirs(self.plots_dir)
 
@@ -153,6 +154,129 @@ class CausalInferenceAnalyzer:
 
         return self.granger_results
 
+    def plot_causal_features(self, top_n=20, save_plot=True):
+        """Create visualization of significant causal features and their p-values"""
+
+        if self.granger_results.empty:
+            print("No Granger causality results to plot.")
+            return
+
+        # Get top N significant features
+        plot_data = self.granger_results[self.granger_results['significant']].head(top_n).copy()
+
+        if plot_data.empty:
+            print("No significant causal features found.")
+            return
+
+        # Create figure with two subplots
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8))
+
+        # Subplot 1: Horizontal bar chart of p-values
+        plot_data_sorted = plot_data.sort_values('corrected_p_value', ascending=True)
+
+        # Create color map based on category
+        category_colors = {
+            'Macro': '#1f77b4',
+            'Technical': '#ff7f0e',
+            'Price': '#2ca02c',
+            'Other': '#d62728'
+        }
+        colors = [category_colors.get(cat, '#7f7f7f') for cat in plot_data_sorted['category']]
+
+        # Plot horizontal bars
+        bars = ax1.barh(range(len(plot_data_sorted)),
+                        plot_data_sorted['corrected_p_value'],
+                        color=colors, alpha=0.8)
+
+        # Add significance threshold line
+        ax1.axvline(x=0.05, color='red', linestyle='--', alpha=0.7, label='Significance threshold (0.05)')
+        ax1.axvline(x=0.01, color='darkred', linestyle='--', alpha=0.7, label='High significance (0.01)')
+
+        # Customize first subplot
+        ax1.set_yticks(range(len(plot_data_sorted)))
+        ax1.set_yticklabels(plot_data_sorted['feature'])
+        ax1.set_xlabel('Corrected P-value', fontsize=12)
+        ax1.set_title(f'Top {len(plot_data_sorted)} Significant Causal Features', fontsize=14, fontweight='bold')
+        ax1.legend(loc='lower right')
+        ax1.grid(True, alpha=0.3, axis='x')
+
+        # Add p-value labels on bars
+        for i, (idx, row) in enumerate(plot_data_sorted.iterrows()):
+            ax1.text(row['corrected_p_value'] + 0.001, i,
+                    f"{row['corrected_p_value']:.4f}",
+                    va='center', fontsize=9)
+
+        # Subplot 2: Category distribution and importance scores
+        category_counts = plot_data['category'].value_counts()
+
+        # Pie chart for category distribution
+        wedges, texts, autotexts = ax2.pie(category_counts.values,
+                                           labels=category_counts.index,
+                                           colors=[category_colors.get(cat, '#7f7f7f') for cat in category_counts.index],
+                                           autopct='%1.1f%%',
+                                           startangle=90)
+
+        ax2.set_title('Distribution of Causal Features by Category', fontsize=14, fontweight='bold')
+
+        plt.tight_layout()
+
+        if save_plot:
+            plot_path = os.path.join(self.plots_dir, 'causal_features_analysis.png')
+            plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+            print(f"\nPlot saved to: {plot_path}")
+
+
+
+    def plot_causal_feature_importance(self, top_n=20, save_plot=True):
+        """Create feature importance plot based on -log10(p-value)"""
+
+        if self.granger_results.empty:
+            return
+
+        # Calculate importance scores
+        plot_data = self.granger_results[self.granger_results['significant']].head(top_n).copy()
+        plot_data['importance_score'] = -np.log10(plot_data['corrected_p_value'].clip(lower=1e-10))
+        plot_data = plot_data.sort_values('importance_score', ascending=True)
+
+        # Create figure
+        fig, ax = plt.subplots(figsize=(10, 8))
+
+        # Create color gradient based on importance
+        norm = plt.Normalize(plot_data['importance_score'].min(), plot_data['importance_score'].max())
+        sm = plt.cm.ScalarMappable(cmap='viridis', norm=norm)
+        sm.set_array([])
+
+        # Plot bars with gradient colors
+        bars = ax.barh(range(len(plot_data)),
+                       plot_data['importance_score'],
+                       color=sm.to_rgba(plot_data['importance_score']))
+
+        # Customize plot
+        ax.set_yticks(range(len(plot_data)))
+        ax.set_yticklabels(plot_data['feature'])
+        ax.set_xlabel('Importance Score (-log10(p-value))', fontsize=12)
+        ax.set_title('Causal Feature Importance Scores', fontsize=14, fontweight='bold')
+        ax.grid(True, alpha=0.3, axis='x')
+
+        # Add colorbar
+        cbar = plt.colorbar(sm, ax=ax)
+        cbar.set_label('Importance Level', fontsize=10)
+
+        # Add score labels
+        for i, (idx, row) in enumerate(plot_data.iterrows()):
+            ax.text(row['importance_score'] + 0.05, i,
+                   f"{row['importance_score']:.2f}",
+                   va='center', fontsize=9)
+
+        plt.tight_layout()
+
+        if save_plot:
+            plot_path = os.path.join(self.plots_dir, 'causal_feature_importance.png')
+            plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+            print(f"Importance plot saved to: {plot_path}")
+
+        plt.show()
+
     def prepare_modeling_dataset(self):
         """Prepare final dataset for modeling"""
         print(f"\nPREPARING MODELING DATASET")
@@ -268,6 +392,10 @@ class CausalInferenceAnalyzer:
             # Step 1: Granger Causality Analysis
             self.granger_causality_analysis()
 
+            self.plot_causal_features()
+
+            self.plot_causal_feature_importance()
+
             # Step 2: Prepare Modeling Dataset
             self.prepare_modeling_dataset()
 
@@ -312,5 +440,4 @@ def get_feature_importance_scores(analyzer):
     return {}
 
 if __name__ == "__main__":
-    print("Simplified Causal Inference Analysis Script Ready!")
     print("Usage: analyzer, results = run_causal_analysis(df)")
