@@ -532,6 +532,7 @@ class StockPredictionPipeline:
                         'Dataset': dataset_name,
                         'Model': model_name,
                         'Features': dataset['feature_count'],
+                        'Best_Params' : self.best_params,
                         'Train_Accuracy': train_metrics['accuracy'],
                         'Train_F1': train_metrics['f1'],
                         'Test_Accuracy': test_metrics['accuracy'],
@@ -552,7 +553,7 @@ class StockPredictionPipeline:
 
                     self.results.append(result)
 
-                    print(f"{model_name}: CV F1={cv_score:.4f}, Test F1={test_metrics['f1']:.4f}")
+                    print(f"{model_name}: CV F1={cv_score:.4f}, Test F1={test_metrics['f1']:.4f}, Best_Params={self.best_params}")
                     logger.info(f"{model_name}: CV F1={cv_score:.4f}, Test F1={test_metrics['f1']:.4f}")
 
                 except Exception as e:
