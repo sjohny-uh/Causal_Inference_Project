@@ -273,8 +273,14 @@ class ModelEvaluator:
         """Create comprehensive training result plots"""
         os.makedirs(output_dir, exist_ok=True)
 
+        # Set default font size
+        plt.rcParams['font.size'] = 18
+
         # 1. Train vs Test Accuracy Comparison
-        fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+        fig, axes = plt.subplots(2, 2, figsize=(22, 16))
+
+        # Add main title
+        fig.suptitle('Training Results Comparison', fontsize=24, y=0.98,fontweight='bold')
 
         # Accuracy comparison
         models = results_df['Model'].unique()
@@ -290,13 +296,21 @@ class ModelEvaluator:
 
             axes[0, i].bar(x - width/2, train_acc, width, label='Train Accuracy', alpha=0.8)
             axes[0, i].bar(x + width/2, test_acc, width, label='Test Accuracy', alpha=0.8)
-            axes[0, i].set_xlabel('Models')
-            axes[0, i].set_ylabel('Accuracy')
-            axes[0, i].set_title(f'Train vs Test Accuracy - {dataset}')
+            axes[0, i].set_xlabel('Models', fontsize=22)
+            axes[0, i].set_ylabel('Accuracy', fontsize=22)
+            axes[0, i].set_title(f'Train vs Test Accuracy - {dataset}', fontsize=22, pad=10)
             axes[0, i].set_xticks(x)
-            axes[0, i].set_xticklabels(models, rotation=45)
-            axes[0, i].legend()
+            axes[0, i].set_xticklabels(models, rotation=45, fontsize=22)
+            axes[0, i].tick_params(axis='y', labelsize=22)
+            axes[0, i].legend(fontsize=20)
             axes[0, i].grid(True, alpha=0.3)
+
+            # Add value labels on bars
+            for j, (train_val, test_val) in enumerate(zip(train_acc, test_acc)):
+                axes[0, i].text(j - width/2, train_val + 0.01, f'{train_val:.3f}',
+                              ha='center', va='bottom', fontsize=22)
+                axes[0, i].text(j + width/2, test_val + 0.01, f'{test_val:.3f}',
+                              ha='center', va='bottom', fontsize=22)
 
         # F1 Score comparison
         for i, dataset in enumerate(datasets):
@@ -306,77 +320,26 @@ class ModelEvaluator:
 
             axes[1, i].bar(x - width/2, train_f1, width, label='Train F1', alpha=0.8)
             axes[1, i].bar(x + width/2, test_f1, width, label='Test F1', alpha=0.8)
-            axes[1, i].set_xlabel('Models')
-            axes[1, i].set_ylabel('F1 Score')
-            axes[1, i].set_title(f'Train vs Test F1 Score - {dataset}')
+            axes[1, i].set_xlabel('Models', fontsize=22)
+            axes[1, i].set_ylabel('F1 Score', fontsize=22)
+            axes[1, i].set_title(f'Train vs Test F1 Score - {dataset}', fontsize=22, pad=10)
             axes[1, i].set_xticks(x)
-            axes[1, i].set_xticklabels(models, rotation=45)
-            axes[1, i].legend()
+            axes[1, i].set_xticklabels(models, rotation=45, fontsize=22)
+            axes[1, i].tick_params(axis='y', labelsize=22)
+            axes[1, i].legend(fontsize=20)
             axes[1, i].grid(True, alpha=0.3)
 
-        plt.tight_layout()
+            # Add value labels on bars
+            for j, (train_val, test_val) in enumerate(zip(train_f1, test_f1)):
+                axes[1, i].text(j - width/2, train_val + 0.01, f'{train_val:.3f}',
+                              ha='center', va='bottom', fontsize=22)
+                axes[1, i].text(j + width/2, test_val + 0.01, f'{test_val:.3f}',
+                              ha='center', va='bottom', fontsize=22)
+
+        plt.tight_layout(rect=[0, 0, 1, 0.96])  # Leave space for suptitle
         plt.savefig(f'{output_dir}/train_test_comparison.png', dpi=300, bbox_inches='tight')
         plt.close()
-
-        # 2. Performance Metrics Heatmap
-        '''
-        fig, ax = plt.subplots(figsize=(12, 8))
-
-        pivot_data = results_df.pivot_table(
-            values=['Test_Accuracy', 'Test_F1', 'Sharpe_Ratio'],
-            index='Model',
-            columns='Dataset'
-        )
-
-        import seaborn as sns
-        sns.heatmap(pivot_data, annot=True, fmt='.3f', cmap='RdYlBu_r', ax=ax)
-        ax.set_title('Model Performance Heatmap')
-        plt.tight_layout()
-        plt.savefig(f'{output_dir}/performance_heatmap.png', dpi=300, bbox_inches='tight')
-        plt.close()
-        '''
-        # Melt the DataFrame to long format
-        melted = results_df.melt(id_vars=['Model', 'Dataset'], 
-                                 value_vars=['Test_Accuracy', 'Test_F1', 'Sharpe_Ratio'],
-                                 var_name='Metric', value_name='Value')
-
-        # Create a new column combining Metric and Dataset for unique columns
-        melted['Metric_Dataset'] = melted['Metric'] + '_' + melted['Dataset']
-
-        # Pivot to get a flat table
-        pivot_data = melted.pivot(index='Model', columns='Metric_Dataset', values='Value')
-
-        # Plot
-        fig, ax = plt.subplots(figsize=(12, 8))
-        sns.heatmap(pivot_data, annot=True, fmt='.3f', cmap='RdYlBu_r', ax=ax)
-        ax.set_title('Model Performance Heatmap')
-        plt.tight_layout()
-        plt.savefig(f'{output_dir}/performance_heatmap.png', dpi=300, bbox_inches='tight')
-        plt.close()
-        
-        
-        
-        # 3. Sharpe Ratio vs Accuracy Scatter
-        fig, ax = plt.subplots(figsize=(10, 8))
-
-        colors = ['red', 'blue', 'green']
-        for i, model in enumerate(models):
-            model_data = results_df[results_df['Model'] == model]
-            ax.scatter(model_data['Test_Accuracy'], model_data['Sharpe_Ratio'],
-                      c=colors[i], label=model, s=100, alpha=0.7)
-
-        ax.set_xlabel('Test Accuracy')
-        ax.set_ylabel('Sharpe Ratio')
-        ax.set_title('Risk-Adjusted Performance vs Accuracy')
-        ax.legend()
-        ax.grid(True, alpha=0.3)
-        plt.tight_layout()
-        plt.savefig(f'{output_dir}/sharpe_vs_accuracy.png', dpi=300, bbox_inches='tight')
-        plt.close()
-
-        print(f"Training result plots saved to {output_dir}")
-
-
+  
 class StockPredictionPipeline:
     """Main pipeline for stock prediction analysis"""
 
@@ -442,7 +405,7 @@ class StockPredictionPipeline:
             # Generate plots
             self.evaluator.plot_training_results(results_df)
 
-            self._plot_regression_metrics(results_df)
+            #self._plot_regression_metrics(results_df)
 
             self._plot_confusion_matrices(
                                 self.y_true_dict, self.y_pred_dict,
@@ -560,150 +523,82 @@ class StockPredictionPipeline:
                     print(f"ERROR: Error training {model_name} on {dataset_name}: {e}")
                     logger.error(f"Error training {model_name} on {dataset_name}: {e}")
 
+   
 
-    def _plot_regression_metrics(self,results_df, output_dir='/content/sample_data/Output'):
-        """Create comprehensive regression metrics visualizations"""
-        import matplotlib.pyplot as plt
-        import seaborn as sns
-        os.makedirs(output_dir, exist_ok=True)
+    def _plot_confusion_matrices(self, y_true_dict, y_pred_dict, model_names, dataset_names, output_dir='/content/sample_data/Output'):
+      """Plot confusion matrices for all model-dataset combinations"""
+      import matplotlib.pyplot as plt
+      import seaborn as sns
+      from sklearn.metrics import confusion_matrix
 
-        fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+      os.makedirs(output_dir, exist_ok=True)
 
-        # 1. MSE Comparison by Model and Dataset
-        pivot_mse = results_df.pivot(index='Model', columns='Dataset', values='MSE')
-        sns.heatmap(pivot_mse, annot=True, fmt='.4f', cmap='Reds', ax=axes[0,0])
-        axes[0,0].set_title('Mean Squared Error (MSE) Heatmap\nLower is Better')
+      # Set default font size
+      plt.rcParams['font.size'] = 20
 
-        # 2. MAE Comparison by Model and Dataset
-        pivot_mae = results_df.pivot(index='Model', columns='Dataset', values='MAE')
-        sns.heatmap(pivot_mae, annot=True, fmt='.4f', cmap='Oranges', ax=axes[0,1])
-        axes[0,1].set_title('Mean Absolute Error (MAE) Heatmap\nLower is Better')
+      n_models = len(model_names)
+      n_datasets = len(dataset_names)
 
-        # 3. R² Comparison by Model and Dataset
-        pivot_r2 = results_df.pivot(index='Model', columns='Dataset', values='R2')
-        sns.heatmap(pivot_r2, annot=True, fmt='.4f', cmap='Blues', ax=axes[0,2])
-        axes[0,2].set_title('R² Score Heatmap\nHigher is Better')
+      # Create figure with column-wise layout (datasets as columns, models as rows)
+      fig, axes = plt.subplots(n_models, n_datasets, figsize=(10*n_datasets, 6*n_models))
 
-        # 4. MSE vs MAE Scatter Plot
-        colors = {'Random Forest': 'red', 'XGBoost': 'blue', 'LightGBM': 'green'}
-        for model in results_df['Model'].unique():
-            model_data = results_df[results_df['Model'] == model]
-            axes[1,0].scatter(model_data['MSE'], model_data['MAE'],
-                             c=colors.get(model, 'black'), label=model, s=100, alpha=0.7)
+      # Add main title
+      fig.suptitle('Confusion Matrix', fontsize=24, y=0.98,fontweight='bold')
 
-        axes[1,0].set_xlabel('Mean Squared Error (MSE)')
-        axes[1,0].set_ylabel('Mean Absolute Error (MAE)')
-        axes[1,0].set_title('MSE vs MAE Relationship')
-        axes[1,0].legend()
-        axes[1,0].grid(True, alpha=0.3)
+      # Handle single row/column cases
+      if n_models == 1 and n_datasets == 1:
+          axes = [[axes]]
+      elif n_models == 1:
+          axes = [axes]
+      elif n_datasets == 1:
+          axes = [[ax] for ax in axes]
 
-        # 5. R² vs Test Accuracy
-        for model in results_df['Model'].unique():
-            model_data = results_df[results_df['Model'] == model]
-            axes[1,1].scatter(model_data['R2'], model_data['Test_Accuracy'],
-                             c=colors.get(model, 'black'), label=model, s=100, alpha=0.7)
+      # Plot confusion matrices (row = model, column = dataset)
+      for i, model in enumerate(model_names):
+          for j, dataset in enumerate(dataset_names):
+              key = f"{dataset}_{model.lower().replace(' ', '_')}"
 
-        axes[1,1].set_xlabel('R² Score')
-        axes[1,1].set_ylabel('Test Accuracy')
-        axes[1,1].set_title('R² vs Classification Accuracy')
-        axes[1,1].legend()
-        axes[1,1].grid(True, alpha=0.3)
+              if key in y_true_dict and key in y_pred_dict:
+                  y_true = y_true_dict[key]
+                  y_pred = y_pred_dict[key]
 
-        # 6. Combined Metrics Bar Chart
-        metrics_summary = results_df.groupby('Model')[['MSE', 'MAE', 'R2']].mean()
+                  cm = confusion_matrix(y_true, y_pred)
 
-        x = range(len(metrics_summary.index))
-        width = 0.25
+                  # Create heatmap with larger annotation font
+                  sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                            xticklabels=['Down (0)', 'Up (1)'],
+                            yticklabels=['Down (0)', 'Up (1)'],
+                            ax=axes[i][j],
+                            annot_kws={'fontsize': 22},  # Set annotation font size
+                            cbar_kws={'label': 'Count'})
 
-        # Normalize metrics for comparison (0-1 scale)
-        mse_norm = 1 - (metrics_summary['MSE'] / metrics_summary['MSE'].max())  # Invert MSE
-        mae_norm = 1 - (metrics_summary['MAE'] / metrics_summary['MAE'].max())  # Invert MAE
-        r2_norm = metrics_summary['R2'] / metrics_summary['R2'].max() if metrics_summary['R2'].max() > 0 else metrics_summary['R2']
+                  accuracy = (cm[0,0] + cm[1,1]) / cm.sum()
 
-        axes[1,2].bar([i - width for i in x], mse_norm, width, label='MSE (inverted)', alpha=0.8)
-        axes[1,2].bar(x, mae_norm, width, label='MAE (inverted)', alpha=0.8)
-        axes[1,2].bar([i + width for i in x], r2_norm, width, label='R²', alpha=0.8)
+                  # Set subplot title
+                  axes[i][j].set_title(f'{model}\n{dataset}\nAcc: {accuracy:.3f}',
+                                      fontsize=22, pad=10)
+                  axes[i][j].set_xlabel('Predicted', fontsize=22)
+                  axes[i][j].set_ylabel('Actual', fontsize=22)
 
-        axes[1,2].set_xlabel('Models')
-        axes[1,2].set_ylabel('Normalized Score (Higher = Better)')
-        axes[1,2].set_title('Normalized Regression Metrics Comparison')
-        axes[1,2].set_xticks(x)
-        axes[1,2].set_xticklabels(metrics_summary.index, rotation=45)
-        axes[1,2].legend()
-        axes[1,2].grid(True, alpha=0.3)
+                  # Set tick label font size
+                  axes[i][j].tick_params(axis='both', labelsize=22)
 
-        plt.tight_layout()
-        plt.savefig(f'{output_dir}/regression_metrics_analysis.png', dpi=300, bbox_inches='tight')
-        plt.close()
+                  # Adjust colorbar font size
+                  cbar = axes[i][j].collections[0].colorbar
+                  if cbar:
+                      cbar.ax.tick_params(labelsize=22)
+                      cbar.set_label('Count', fontsize=22)
 
-        # Additional plot: Metrics by Feature Count
-        fig, ax = plt.subplots(figsize=(12, 8))
+      # Add column headers for clarity (optional)
+      for j, dataset in enumerate(dataset_names):
+          fig.text(0.5/n_datasets + j/n_datasets, 0.95, dataset.upper(),
+                  ha='center', va='top', fontsize=22, weight='bold')
 
-        for dataset in results_df['Dataset'].unique():
-            dataset_data = results_df[results_df['Dataset'] == dataset]
-            ax.scatter(dataset_data['Features'], dataset_data['R2'],
-                      label=f'{dataset} - R²', s=100, alpha=0.7)
-            ax.scatter(dataset_data['Features'], 1-dataset_data['MSE'],
-                      label=f'{dataset} - MSE (inverted)', s=100, alpha=0.7, marker='^')
+      plt.tight_layout(rect=[0, 0, 1, 0.94])  # Leave space for suptitle
+      plt.savefig(f'{output_dir}/confusion_matrices.png', dpi=300, bbox_inches='tight')
+      plt.close()
 
-        ax.set_xlabel('Number of Features')
-        ax.set_ylabel('Performance Score')
-        ax.set_title('Regression Performance vs Feature Count')
-        ax.legend()
-        ax.grid(True, alpha=0.3)
-
-        plt.tight_layout()
-        plt.savefig(f'{output_dir}/metrics_vs_features.png', dpi=300, bbox_inches='tight')
-        plt.close()
-
-        print(f"Regression metrics plots saved to {output_dir}")
-
-
-    def _plot_confusion_matrices(self,y_true_dict, y_pred_dict, model_names, dataset_names, output_dir='/content/sample_data/Output'):
-        """Plot confusion matrices for all model-dataset combinations"""
-        import matplotlib.pyplot as plt
-        import seaborn as sns
-        from sklearn.metrics import confusion_matrix
-
-        os.makedirs(output_dir, exist_ok=True)
-
-        n_cols = len(model_names)
-        n_rows = len(dataset_names)
-
-        fig, axes = plt.subplots(n_rows, n_cols, figsize=(5*n_cols, 4*n_rows))
-
-        if n_rows == 1 and n_cols == 1:
-            axes = [[axes]]
-        elif n_rows == 1:
-            axes = [axes]
-        elif n_cols == 1:
-            axes = [[ax] for ax in axes]
-
-        for i, dataset in enumerate(dataset_names):
-            for j, model in enumerate(model_names):
-                key = f"{dataset}_{model.lower().replace(' ', '_')}"
-
-                if key in y_true_dict and key in y_pred_dict:
-                    y_true = y_true_dict[key]
-                    y_pred = y_pred_dict[key]
-
-                    cm = confusion_matrix(y_true, y_pred)
-
-                    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
-                               xticklabels=['Down (0)', 'Up (1)'],
-                               yticklabels=['Down (0)', 'Up (1)'],
-                               ax=axes[i][j])
-
-                    accuracy = (cm[0,0] + cm[1,1]) / cm.sum()
-                    axes[i][j].set_title(f'{model}\n{dataset}\nAcc: {accuracy:.3f}')
-                    axes[i][j].set_xlabel('Predicted')
-                    axes[i][j].set_ylabel('Actual')
-
-        plt.tight_layout()
-        plt.savefig(f'{output_dir}/confusion_matrices.png', dpi=300, bbox_inches='tight')
-        plt.close()
-
-        print(f"Confusion matrices saved to {output_dir}/confusion_matrices.png")
+      print(f"Confusion matrices saved to {output_dir}/confusion_matrices.png")
 
     def _generate_report(self, results_df):
         """Generate comparison report"""
@@ -734,17 +629,7 @@ class StockPredictionPipeline:
             print(f"Test F1: {best_model['Test_F1']:.4f}")
             print(f"Test Accuracy: {best_model['Test_Accuracy']:.4f}")
             print(f"Sharpe Ratio: {best_model['Sharpe_Ratio']:.4f}")
-        '''
-        # Feature set comparison
-        print(f"\nFEATURE SET COMPARISON:")
-        comparison = results_df.groupby('Dataset').agg({
-            'Test_F1': 'mean',
-            'Test_Accuracy': 'mean',
-            'Sharpe_Ratio': 'mean',
-            'Features': 'first'
-        }).round(4)
-        print(comparison.to_string())
-        '''
+        
 def run_stock_prediction_analysis(df, selected_metadata_path, causal_metadata_path):
     """Main function to run stock prediction analysis"""
     pipeline = StockPredictionPipeline(df, selected_metadata_path, causal_metadata_path)
